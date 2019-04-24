@@ -4,9 +4,8 @@
   "description": "A boilerplate to follow along 'Handing Unused CSS with SASS' article",
   "scripts": {
     "clean": "rimraf dist/static/*.css",
-    "build:css": "node build/css.js",
-    "watch:css": "onchange \"src/assets/scss/*.scss\" \"src/assets/scss/*/**.scss\" -- npm run build:css",
-    "build": "npm run clean && npm run build:css"
+    "watch": "onchange \"src/assets/scss/*.scss\" \"src/assets/scss/*/**.scss\" -- npm run build",
+    "build": "npm run clean && node build/css.js"
   },
   "repository": {
     "type": "git",
