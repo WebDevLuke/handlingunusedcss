@@ -1,0 +1,115 @@
+//------------------------------------------------------------------------------------------------
+// SAMPLE COMPONENT
+//------------------------------------------------------------------------------------------------
+
+/*
+This is a sample component template. Copy and adapt as required. Use
+'c' prefix to establish as component, and also BEM naming convention.
+*/
+
+/*
+The render mixin allows you to conditionally import the class depending on a number of factors:-
+- If the component is within the $imports map
+- If the component is listed as a dependency of another component, and is required for it to display correctly, even if disabled in $imports
+*/
+@include render('mycomponent') {
+
+
+// OPTIONS
+//------------------------------------------------------------------------------------------------
+
+$component-sample-filter: false !default;
+$component-sample-modifiername-modifiers: $enable-all-classes !default; // False by default
+
+
+// COMPONENT COLOURS
+//------------------------------------------------------------------------------------------------
+
+/*
+Easily assign colours to the component without having to
+find/replace variables.
+*/
+
+$component-sample-name-color: color('medium') !default;
+
+
+// BLOCK & ELEMENTS
+//------------------------------------------------------------------------------------------------
+
+.c-mycomponent {
+
+}
+
+.c-mycomponent__element {
+
+}
+
+
+// MODIFIER
+//------------------------------------------------------------------------------------------------
+
+/*
+The filter mixin alllows you to conditionally render content within it depending on a number of factors:-
+- If its local boolean ($component-sample-modifiername-modifiers) is true,
+- If the class name (c-mycomponent--modifier) is in the local filter ($component-sample-filter)
+- If the class name (c-mycomponent--modifier) is in the global filter ($global-filter)
+- If the class is listed as a dependency of another component, and is required for it to display correctly
+*/
+@include filter('c-mycomponent--modifier', $component-sample-filter, $component-sample-modifiername-modifiers) {
+	.c-mycomponent--modifier {
+
+	}
+}
+
+
+// BEM MIX EXAMPLE
+//------------------------------------------------------------------------------------------------
+
+/*
+An example of a BEM mix. Useful for when nesting components within others.
+For example, if we want to introduce new styles to our c-icon component
+when its nested within our c-button component, instead of tampering with our
+original icon component we create a brand new element for our button
+component with a name which is a "mix" of our 2 components. For example:
+
+<button class="c-button">
+	<svg class="c-icon c-button__icon"></svg>
+</button>
+
+Quoting the below:
+"This avoids the question of where things live, it reduces the specificity by
+avoiding nesting, and also prevents mutation by avoiding repeating the
+ .btn class again."
+
+https://csswizardry.com/2017/02/code-smells-in-css-revisited/#bem-mixes
+*/
+
+.c-mycomponent__othercomponent {
+
+}
+
+
+// STATEFUL MODIFIER EXAMPLE
+//------------------------------------------------------------------------------------------------
+
+/*
+This is an example of a component with a stateful class. This stateful class
+represents a change of state. The below example would target a button
+which has an active state. Other possible stateful classes could be 'is-expanded',
+'is-hidden', 'is-fixed'.
+*/
+
+/*
+<a href="/" class="c-mycomponent is-active">
+	CONTENT
+</a>
+*/
+
+.c-mycomponent.is-active {
+
+}
+
+
+// END RENDER
+//------------------------------------------------------------------------------------------------
+}

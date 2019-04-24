@@ -1,0 +1,251 @@
+//------------------------------------------------------------------------------------------------
+// EVO TOOLKIT LOCAL MANIFEST
+//------------------------------------------------------------------------------------------------
+
+/*
+Imports all EvoToolkit parts required to construct a page.
+*/
+
+
+// GLOBAL SETTINGS
+//------------------------------------------------------------------------------------------------
+
+// SETTINGS (Global variables, maps, and other data used by the framework)
+@import 'node_modules/evotoolkit/src/scss/settings/core';
+
+// TOOLS (Helpful SASS functions and mixins which are suited for various tasks. We import early for usage in overrides.)
+@import 'node_modules/evotoolkit/src/scss/tools/core';
+
+// GLOBAL OVERRIDES (Apply overrides site-wide. Copy to your local ITCSS and edit if required)
+@import 'settings/overrides';
+@import 'settings/theme-overrides';
+
+
+// LOCAL OVERRIDES
+//------------------------------------------------------------------------------------------------
+
+/*
+Overrides to enable CSS for this manifest only.
+Use to enable CSS as required on a page by page basis.
+
+Choose which parts and classes to include.
+These will override any global equivalents.
+*/
+
+$imports: amend-map($imports, (
+	object: (
+		// 'box',
+		// 'container',
+		// 'cover',
+		// 'icon',
+		// 'layout',
+		// 'list-bare',
+		// 'media'
+	),
+	component: (
+		// 'badge',
+		// 'box',
+		// 'button',
+		// 'calendar',
+		// 'checkbox',
+		// 'expander',
+		// 'inputs',
+		// 'list',
+		// 'modal',
+		// 'switch',
+		// 'table',
+		// 'tabs',
+		// 'tooltip',
+		// 'typography'
+	),
+	utility: (
+		// 'alignments',
+		// 'breakout',
+		// 'colors',
+		// 'heights',
+		// 'hide',
+		// 'spacing',
+		// 'widths'
+	)
+));
+
+// $global-filter: set-filter($global-filter, 
+// 	'my-whitelisted-class',
+// 	'my-second-whitelisted-class'
+// );
+
+// @include set-spacing((
+// 	'large' : 60px,
+// 	'small' : 10px
+// ));
+
+
+// OBJECTS
+//--------------------------------------------------------
+
+// BOX
+// $object-box-filter: set-filter($object-box-filter, '');
+// $object-box-spacing-modifiers: true;
+// $object-box-fixed-modifiers: true;
+
+// CONTAINER
+// $object-container-filter: set-filter($object-container-filter, '');
+// $object-container-width-modifiers: true;
+
+// COVER
+// $object-cover-filter: set-filter($object-cover-filter, '');
+// $object-cover-alignment-modifiers: true;
+
+// ICON
+// $object-icon-filter: set-filter($object-icon-filter, '');
+// $object-icon-sizes: true;
+// $object-icon-sizes-responsive: true;
+// $object-icon-flip-modifiers: true;
+// $object-icon-circle-modifier: true;
+
+// @include set-icon-sizes((
+// 	'large' : 60px,
+// 	'small' : 10px
+// ));
+
+// LAYOUT
+// $object-layer-filter: set-filter($object-layer-filter, '');
+// $object-layout-flush-modifiers: true;
+// $object-layout-break-modifier: true;
+// $object-layout-fit-modifiers: true;
+// $object-layout-spacing-modifiers: true;
+// $object-layout-spacing-modifiers-responsive: true;
+
+// MEDIA
+// $object-media-filter: set-filter($object-media-filter, '');
+// $object-media-spacing-modifiers: true;
+// $object-media-collapse-modifiers: true;
+
+
+// COMPONENTS
+//--------------------------------------------------------
+
+// BADGE
+// $component-badge-filter: set-filter($component-badge-filter, '');
+// $component-badge-size-modifiers: true;
+
+// BOX
+// $component-box-filter: set-filter($component-box-filter, '');
+// $component-box-rounded-modifiers: true;
+// $component-box-shadow-modifier: true;
+// $component-box-hide-overflow-modifier: true;
+// $component-box-border-modifiers: true;
+
+// BUTTON
+// $component-button-filter: set-filter($component-button-filter, '');
+// $component-button-size-modifiers: true;
+// $component-button-secondary-modifier: true;
+// $component-button-invert-modifier: true;
+// $component-button-slim-modifier: true;
+// $component-button-border-modifier: true;
+// $component-button-icon-alignment-modifiers: true;
+// $component-button-icon-size-modifiers: true;
+
+// CALENDER
+// $component-calendar-filter: set-filter($component-calendar-filter, '');
+// $component-calendar-size-modifiers: true;
+
+// EXPANDER
+// $component-expander-filter: set-filter($component-expander-filter, '');
+// $component-expander-border-modifier: true;
+
+// INPUT
+// $component-input-filter: set-filter($component-input-filter, '');
+// $component-input-joined-button-modifier: true;
+// $component-input-box-modifiers: true;
+// $component-input-calendar: true;
+// $component-input-calendar-float-modifier: true;
+// $component-input-calendar-above-modifier: true;
+// $component-input-calendar-breakout-modifiers: true;
+// $component-input-left-label-modifier: true;
+// $component-input-invert-modifier: true;
+
+// MODAL
+// $component-modal-filter: set-filter($component-modal-filter, '');
+// $component-modal-size-modifiers: true;
+
+// TABLE
+// $component-table-filter: set-filter($component-table-filter, '');
+// $component-table-collapse-modifiers: true;
+// $component-table-top-modifier: true;
+// $component-table-bare-modifier: true;
+
+// TABS
+// $component-tabs-filter: set-filter($component-tabs-filter, '');
+// $component-tabs-border-modifier: true;
+// $component-tabs-invert-modifier: true;
+// $component-tabs-full-width-modifier: true;
+// $component-tabs-collapse-modifiers: true;
+
+// TOOLTIP
+// $component-tooltip-filter: set-filter($component-tabs-filter, '');
+// $component-tooltip-small-modifier: true;
+// $component-tooltip-alignment-modifiers: true;
+// $component-tooltip-alignment-responsive-modifiers: true;
+// $component-tooltip-invert-modifier: true;
+// $component-tooltip-embedded-modifier: true;
+
+// TYPOGRAPHY
+// $component-typography-filter: set-filter($component-typography-filter, '');
+// $component-typography-bold-modifier: true;
+// $component-typography-emphasis-modifier: true;
+// $component-typography-underline-modifier: true;
+// $component-typography-nowrap-modifier: true;
+
+
+// UTILITIES
+//--------------------------------------------------------
+
+// ALIGNMENTS
+// $utility-alignments-filter: set-filter($utility-alignments-filter, '');
+// $utility-alignments: true;
+// $utility-alignments-responsive: true;
+// $utility-alignments-flex: true;
+
+// BREAKOUT
+// $utility-breakout-filter: set-filter($utility-breakout-filter, '');
+// $utility-breakout-responsive-max: true;
+
+// COLORS
+// $utility-colors-filter: set-filter($utility-colors-filter, '');
+// $utility-colors-theme: true;
+// $utility-colors-text: true;
+
+// HIDE
+// $utility-hide-filter: set-filter($utility-hide-filter, '');
+// $utility-hide-responsive: true;
+// $utility-hide-responsive-max: true;
+
+// SPACING
+// $utility-spacing-filter: set-filter($utility-spacing-filter, '');
+// $utility-spacing-bottom: true;
+// $utility-spacing-right: true;
+// $utility-spacing-responsive: true;
+
+// WIDTHS
+// $utility-widths-filter: set-filter($utility-widths-filter, '');
+// $utility-widths: true;
+// $utility-widths-fixed: true;
+// $utility-widths-offsets: true;
+// $utility-widths-misc: true;
+
+
+// LOCAL IMPORTS
+//------------------------------------------------------------------------------------------------
+
+// DEPENDENCIES (Used to specify component dependencies to make sure all required CSS classes are imported)
+@import 'settings/dependencies';
+
+// OBJECTS (These are undecorated design patterns. You would typically use these as a part of existing components or when building your own)
+@import 'node_modules/evotoolkit/src/scss/objects/core';
+
+// COMPONENTS (Ready made, customisable UI components which you can drop into your project)
+@import 'node_modules/evotoolkit/src/scss/components/core';
+
+// UTILITIES (High-specificity, very explicit selectors. Typically small, single use helper classes)
+@import 'node_modules/evotoolkit/src/scss/utilities/core';

@@ -1,0 +1,96 @@
+//------------------------------------------------------------------------------------------------
+// THEME OVERRIDES
+//------------------------------------------------------------------------------------------------
+
+/*
+A complete list of all the different theme overrides you can apply to EvoToolkit.
+Simply comment in and apply your changes sitewide.
+
+For full details, please visit the Brand Toolkit.
+*/
+
+// @include set-color((
+// 	'green' : #00ff00
+// ));
+
+// @include set-theme((
+// 	'subtle': #da76d1,
+// 	'highlight': #9bdf65
+// ));
+
+// Defaults:  dark 10%, light 40%
+// @include set-theme-shades((
+// 	'subtle': (
+// 		'dark': 5%,
+// 		'light': 23%
+// 	)
+// ));
+
+// @include set-theme-dark-text-('subtle', 'highlight'));
+
+// BADGE
+// $component-badge-color: 'dark';
+
+// BOX
+// $component-box-color: 'light';
+// $component-box-border-color: 'medium';
+// $component-box-focus-color: 'primary';
+
+// BUTTON
+//$component-button-color: 'primary';
+
+// CALENDAR
+// $component-calendar-button-color: 'primary';
+// $component-calendar-border-color: 'medium';
+// $component-calendar-prevnextmonth-cell-color: 'light';
+// $component-calendar-cell-selected: 'primary';
+
+// CHECKBOX
+// $component-checkbox-color: 'light';
+// $component-checkbox-accent-color: 'primary';
+
+// EXPANDER
+// $component-expander-header-background-color: 'light';
+// $component-expander-accent-color: 'primary';
+// $component-expander-border-color: 'medium';
+
+// INPUTS
+// $component-input-focus-color: 'primary';
+// $component-input-border-color: 'medium';
+// $component-input-disabled-background-color: 'light';
+// $component-input-box-color: 'light'; // Prefix / Suffix
+// $component-input-disabled-text-color: 'medium';
+// $component-input-calendar-box-border-color: 'primary';
+
+// LIST
+// $component-list-bullet-color: 'primary';
+
+// MODAL
+// $component-modal-focus-color: 'primary';
+
+// SWITCH
+// $component-switch-background-color: 'light';
+// $component-switch-border-color: 'medium';
+// $component-switch-button-color: #ffffff;
+// $component-switch-focus-color: 'primary';
+
+// TABLE
+// $component-table-border-color: 'medium';
+// $component-table-row-hover-color: 'light';
+// $component-table-header-background-color: 'light';
+// $component-table-collapse-even-row-color: 'light';
+
+// TABS
+// $component-tabs-color: 'light';
+// $component-tabs-border-color: 'medium';
+// $component-tabs-disabled-color: 'disabled';
+// $component-tabs-accent-color: 'primary';
+// $component-tabs-focus-color: 'light';
+// $component-tabs-inverted-focus-color: 'primary-dark';
+
+// TOOLTIP
+// $component-tooltip-icon-color: 'primary';
+
+// TYPOGRAPHY
+// $component-typography-link-color: 'primary';
+// $component-typography-focus-color: 'accent';

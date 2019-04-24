@@ -1,0 +1,23 @@
+//------------------------------------------------------------------------------------------------
+// EVO TOOLKIT CORE MANIFEST
+//------------------------------------------------------------------------------------------------
+
+/*
+Imports global EvoToolkit parts which are shared across all pages to form core.css.
+*/
+
+// SETTINGS (Global variables, maps, and other data used by the framework)
+@import 'node_modules/evotoolkit/src/scss/settings/core';
+
+// TOOLS (Helpful SASS functions and mixins which are suited for various tasks. We import early for usage in overrides.)
+@import 'node_modules/evotoolkit/src/scss/tools/core';
+
+// GLOBAL OVERRIDES (Apply overrides site-wide. Copy to your local ITCSS and edit if required)
+@import 'settings/overrides';
+@import 'settings/theme-overrides';
+
+// GENERIC (he first layer that actually produces any CSS. It houses very high-level, far reaching styles which effect much of the DOM)
+@import 'node_modules/evotoolkit/src/scss/generic/core';
+
+// ELEMENTS (Styling bare, unclassed elements. For example, what would a <h1> look like without any classes attached?)
+@import 'node_modules/evotoolkit/src/scss/elements/core';
