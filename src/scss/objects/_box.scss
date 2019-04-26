@@ -1,0 +1,80 @@
+//------------------------------------------------------------------------------------------------
+// BOX OBJECT
+//------------------------------------------------------------------------------------------------
+
+/*
+Boxes off content
+http://csswizardry.com/2011/10/the-island-object/
+*/
+
+
+// BLOCK & ELEMENTS
+//------------------------------------------------------------------------------------------------
+
+/*
+[1] So we can apply the `.o-box` class to naturally-inline elements.
+[2] If within a flex box, make sure it stretches full width by default.
+*/
+
+.o-box {
+	display: block; /* [1] */
+	width: 100%; /* [2] */
+}
+
+
+// SPACING MODIFIERS
+//------------------------------------------------------------------------------------------------
+
+/*
+Generates variants in padding size using data from settings.spacing. 20%
+extra is added to the bottom of the box to better visually balance contents.
+*/
+
+// Generate using settings.spacing
+// Example: o-box--spacing-tiny
+@each $sp-name, $sp-value in $spacing {
+	.o-box--spacing-#{$sp-name} {
+		padding: rem($sp-value) rem($sp-value) rem($sp-value + ($sp-value * 0.2)) rem($sp-value);
+	}
+}
+
+// Create responsive variants using settings.breakpoints
+// Changes padding when breakpoint is hit
+// Example: o-box--spacing-tiny@md
+@each $bp-name, $bp-value in $mq-breakpoints {
+	@include mq(#{$bp-name}) {
+		@each $sp-name, $sp-value in $spacing {
+			.o-box--spacing-#{$sp-name}\@#{$bp-name} {
+				padding: rem($sp-value) rem($sp-value) rem($sp-value + ($sp-value * 0.2)) rem($sp-value);
+			}
+		}
+	}
+}
+
+
+// SPACING FILTERS
+//------------------------------------------------------------------------------------------------
+
+/*
+Add these to a box with spacing to filter which sides have spacing.
+*/
+
+.o-box--spacing-disable-left,
+.o-box--spacing-horizontal {
+	padding-left: 0;
+}
+
+.o-box--spacing-disable-right,
+.o-box--spacing-horizontal {
+	padding-right: 0;
+}
+
+.o-box--spacing-disable-top,
+.o-box--spacing-vertical  {
+	padding-top: 0;
+}
+
+.o-box--spacing-disable-bottom,
+.o-box--spacing-vertical  {
+	padding-bottom: 0;
+}

@@ -20,7 +20,7 @@ glob('src/scss/*.scss', {}, function(er, files) {
 			precision: 8
 		}, function(err, result) {
 			if(!err) {
-				fs.writeFile(`dist/static/${fileName}.min.css`, result.css, function(err){
+				fs.writeFile(`dist/${fileName}.css`, result.css, function(err){
 					if(err) {
 						console.log(err);
 						return false;

@@ -1,0 +1,105 @@
+//------------------------------------------------------------------------------------------------
+// RESET
+//------------------------------------------------------------------------------------------------
+
+/*
+An additional reset that sits on top of Normalize.css.
+*/
+
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+/*
+Remove trailing margins from nested lists.
+*/
+
+li > {
+	ol,
+	ul {
+		margin-bottom: 0;
+	}
+}
+
+
+/*
+Remove default table spacing.
+*/
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+[1] Remove firefox blur on invalid elements
+*/
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+	box-shadow: none; /* [1] */
+}
+
+/*
+Resets transparency on input placeholders
+*/
+
+::-webkit-input-placeholder {
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	opacity: 1;
+}
+
+/*
+Disables Safari iOS default styles for disabled inputs
+*/
+input:disabled,
+textarea:disabled {
+	opacity: 1;
+}
+
+/*
+Remove spinners/arrows for number input
+*/
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+/*
+Remove default italics from address element
+*/
+
+address {
+	font-style: normal;
+}
+
+/*
+Make button into blank element
+*/
+button {
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+}

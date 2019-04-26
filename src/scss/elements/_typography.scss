@@ -1,0 +1,48 @@
+//------------------------------------------------------------------------------------------------
+// TYPOGRAPHY
+//------------------------------------------------------------------------------------------------
+
+/*
+Basic styles for typography elements
+*/
+
+
+// HEADINGS
+//------------------------------------------------------------------------------------------------
+
+/*
+Keep headers identical and apply styles via component classes avoiding the
+trap of semantically requiring a specific header and then having to override
+styles because cosmetics aren't appropriate.
+
+http://csswizardry.com/2016/02/managing-typography-on-large-apps/
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1rem;
+}
+
+
+// BODY
+//------------------------------------------------------------------------------------------------
+
+p {
+	margin-bottom: 1.2em;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+
+/*
+Define consistent indentation lists. Also, add matching margin bottom so
+they can be mixed in with paragraphs.
+*/
+
+dd, ol, ul {
+	margin: 0 0 1.2em 1.2em;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,20 @@
+//------------------------------------------------------------------------------------------------
+// SPACING UNITS
+//------------------------------------------------------------------------------------------------
+
+/*
+Here we define spacing variants. These are used to generate spacing
+variants for many object and utility classes to give you an easy way of
+spacing out content. Typically, if a component requires more precise
+spacing, this CSS should be defined in the component CSS, not here.
+*/
+
+$spacing: (
+	'none': 0px,
+	'micro': 5px,
+	'tiny': 10px,
+	'small': 15px,
+	'regular': 30px,
+	'large': 50px,
+	'huge': 75px
+) !default;

@@ -1,0 +1,83 @@
+//------------------------------------------------------------------------------------------------
+// TYPOGRAPHY
+//------------------------------------------------------------------------------------------------
+
+/*
+In order to separate our semantic decisions from our stylistic ones, we only
+define opinionated typographical styles against classes, NOT against
+typographic HTML elements.
+
+Example: Will prevent a case where we need to use a H3 because of how it
+looks, rather than because its the correct place to use it in the document.
+
+https://csswizardry.com/2016/02/managing-typography-on-large-apps/
+
+Naming convention taken from the NATO phonetic alphabet:
+https://en.wikipedia.org/wiki/NATO_phonetic_alphabet
+*/
+
+// COMPONENT COLOURS
+//------------------------------------------------------------------------------------------------
+
+/*
+Easily assign colours to the component without having to
+find/replace variables.
+*/
+
+$component-typography-link-color: #ba4252 !default;
+$component-typography-smallprint-color: #999999 !default;
+$component-typography-focus-color: #5aa1ce !default;
+
+
+// BLOCK & ELEMENTS
+//------------------------------------------------------------------------------------------------
+
+.c-type-alpha {
+	font-size: rem(36px);
+}
+
+.c-type-bravo {
+	font-size: rem(29px);
+}
+
+.c-type-charlie {
+	font-size: rem(25px);
+}
+
+.c-type-delta {
+	font-size: rem(22px);
+}
+
+.c-type-echo {
+	font-size: rem(20px);
+}
+
+.c-type-foxtrot {
+	font-size: rem(18px);
+}
+
+@include mq(md) {
+	.c-type-alpha {
+		font-size: rem(50px);
+	}
+
+	.c-type-bravo {
+		font-size: rem(40px);
+	}
+
+	.c-type-charlie {
+		font-size: rem(34px);
+	}
+
+	.c-type-delta {
+		font-size: rem(28px);
+	}
+
+	.c-type-echo {
+		font-size: rem(24px);
+	}
+
+	.c-type-foxtrot {
+		font-size: rem(22px);
+	}
+}

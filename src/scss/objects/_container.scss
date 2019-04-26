@@ -1,0 +1,21 @@
+//------------------------------------------------------------------------------------------------
+// CONTAINER OBJECT
+//------------------------------------------------------------------------------------------------
+
+/*
+Constrains the content within a max-width. Typically used with
+o-layout and width utilities to form a 12 column grid system.
+*/
+
+
+// BLOCK & ELEMENTS
+//------------------------------------------------------------------------------------------------
+
+.o-container {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: rem(1170px);
+	padding-left: rem(20px);
+	padding-right: rem(20px);
+	width: 100%; 
+}

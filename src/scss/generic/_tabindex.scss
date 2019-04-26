@@ -1,0 +1,13 @@
+//------------------------------------------------------------------------------------------------
+// TABINDEX
+//------------------------------------------------------------------------------------------------
+
+/*
+Set a global tabindex rule, so when non-focusable elements are made
+focusable, the intent is to make them interactive, so we add a pointer
+cursor on hover.
+*/
+
+[tabindex] {
+	cursor: pointer;
+}

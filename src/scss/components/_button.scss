@@ -1,0 +1,73 @@
+//------------------------------------------------------------------------------------------------
+// BUTTON
+//------------------------------------------------------------------------------------------------
+
+/*
+Standard button component.
+*/
+
+
+// COMPONENT COLOURS
+//------------------------------------------------------------------------------------------------
+
+/*
+Easily assign colours to the button component without having to
+find/replace variables.
+*/
+
+$component-button-color: #ba4252 !default;
+$component-button-hover-color: darken($component-button-color, 10%) !default;
+$component-button-border-color: #ffffff !default;
+
+
+// BLOCK & ELEMENTS
+//------------------------------------------------------------------------------------------------
+
+/*
+[1] Remove anchor text-decoration (necessary when styling `a`s as buttons).
+[2] Font size duplicate of c-text-lead.
+[3] Focus styles for when the user tabs onto the button shouldn't be just a
+colour change as people with colour blindness may not see it.
+*/
+
+.c-button {
+	align-items: center;
+	background-color: $component-button-color;
+	border-radius: rem(10px);
+	border: rem(2px) solid transparent;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-flex;
+	font-size: rem(18px); /* [2] */
+	font-weight: bold;
+	justify-content: center;
+	line-height: 2;
+	padding: 0 rem(20px);
+	text-decoration: none; /* [1] */
+	position: relative;
+	transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+	min-height: rem(50px);
+	min-width: rem(50px);
+
+	&:hover {
+		background-color: $component-button-hover-color;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none; /* [1] */
+		outline: none;
+	}
+
+	&:focus {
+		background-color: $component-button-hover-color;
+		box-shadow: 0 rem(1px) rem(3px) rgba(0,0,0, 0.25), 0 0 rem(15px) rem(3px) rgba($component-button-color, 0.5) /* [3] */
+	}
+}
+
+@include mq(md) {
+	.c-button {
+		font-size: rem(22px); /* [2] */
+	}
+}

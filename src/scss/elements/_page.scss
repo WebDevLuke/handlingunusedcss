@@ -1,0 +1,21 @@
+//------------------------------------------------------------------------------------------------
+// HTML STYLES
+//------------------------------------------------------------------------------------------------
+
+/*
+Set basic styles for HTML top level element.
+*/
+
+/*
+[1] The `font-size` is calculated to exist in ems so the users browser
+font-size is respected if changed.
+*/
+
+html {
+	font-family: sans-serif;
+	font-size: (16px / 16px) * 1em; /* [1] */
+	line-height: 1.5;
+	min-height: 100%;
+	overflow-y: scroll;
+	color: #000000;
+}

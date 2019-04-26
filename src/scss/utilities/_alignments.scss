@@ -1,0 +1,77 @@
+//------------------------------------------------------------------------------------------------
+// ALIGNMENTS
+//------------------------------------------------------------------------------------------------
+
+
+// TEXT
+//------------------------------------------------------------------------------------------------
+
+.u-align-left {
+	text-align: left !important;
+}
+
+.u-align-center {
+	text-align: center !important;
+}
+
+
+.u-align-right {
+	text-align: right !important;
+}
+
+// Changes alignment when breakpoint is hit
+// Example: .u-align-left@md
+@each $bp-name, $bp-value in $mq-breakpoints {
+	@include mq(#{$bp-name}) {
+		.u-align-left\@#{$bp-name} {
+			text-align: left !important;
+		}
+
+		.u-align-center\@#{$bp-name} {
+			text-align: center !important;
+		}
+
+		.u-align-right\@#{$bp-name} {
+			text-align: right !important;
+		}
+	}
+}
+
+
+// FLEX ALIGNMENTS
+//------------------------------------------------------------------------------------------------
+
+[class*='u-flex-'] {
+	display: flex !important;
+}
+
+// Flex equivalents
+.u-flex-middle,
+.u-flex-center-all {
+	align-items: center !important;
+}
+
+.u-flex-center,
+.u-flex-center-all {
+	justify-content: center !important;
+}
+
+.u-flex-justify-start,
+.u-flex-left {
+	justify-content: flex-start !important;
+}
+
+.u-flex-justify-end,
+.u-flex-right {
+	justify-content: flex-end !important;
+}
+
+.u-flex-align-start,
+.u-flex-top {
+	align-items: flex-start !important;
+}
+
+.u-flex-align-end,
+.u-flex-bottom {
+	align-items: flex-end !important;
+}

@@ -1,0 +1,24 @@
+//------------------------------------------------------------------------------------------------
+// REM FUNCTION
+//------------------------------------------------------------------------------------------------
+
+/*
+A function to convert any px value into its rem equivalent
+
+.myElement {
+	padding: rem(16px);
+}
+*/
+
+@function rem($value) {
+	@if (type-of($value) == number) {
+		@if (unit($value) != 'px') {
+			@error "'#{$value}' needs to be a pixel value.";
+		}
+	}
+	@else {
+		@error "'#{$value}' needs to be a number.";
+	}
+
+	@return $value / 16px * 1rem;
+}

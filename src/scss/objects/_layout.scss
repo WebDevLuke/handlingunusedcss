@@ -1,0 +1,130 @@
+//------------------------------------------------------------------------------------------------
+// LAYOUT OBJECT
+//------------------------------------------------------------------------------------------------
+
+/*
+The layout object is used to construct a grid-like layout system, with each
+layout__item representing an individual column. Typically used with
+container object and width utilities to form a grid system.
+*/
+
+
+// BLOCK & ELEMENTS
+//------------------------------------------------------------------------------------------------
+
+/*
+[1] Allows us to use the layout object on any type of element.
+[2] Makes layout fill all available space. Useful for nesting layouts within
+layouts.
+[3] We need to defensively reset any box-model properties.
+[4] Absorb amount equal to half of the gutter on either side to account for
+their spacing.
+[5] Removes bullet points if layout is a list
+*/
+
+.o-layout {
+	align-items: flex-start;
+	display: flex; /* [1] */
+	flex-wrap: wrap;
+	flex-grow: 1; /* [2] */
+	margin: 0; /* [3] */
+	padding: 0; /* [3] */
+	margin-left: -rem(20px) / 2; /* [4] */
+	margin-right: -rem(20px) / 2; /* [4] */
+	list-style: none; /* [5] */
+}
+
+/*
+[1] Required in order to combine fluid widths with fixed gutters.
+*/
+
+.o-layout__item {
+	box-sizing: border-box; /* [1] */
+	padding-left: rem(20px) / 2;
+	padding-right: rem(20px) / 2;
+	vertical-align: top;
+	width: 100%;
+	max-width: 100%;
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+
+// FLUSH MODIFIER
+//------------------------------------------------------------------------------------------------
+
+/*
+Flush removes the gutter between layout items.
+*/
+
+/*
+[1] Remove negative margins as we no longer have to absorb any paddings
+from columns
+*/
+
+.o-layout--flush {
+	margin-left: 0; /* [1] */
+	margin-right: 0; /* [1] */
+	& > .o-layout__item {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.o-layout__item--flush { 
+	&:not(:first-child) {
+		padding-left: 0;
+	}
+	&:not(:last-child) {
+		padding-right: 0;
+	}
+}
+
+
+
+// FIT MODIFIER
+//------------------------------------------------------------------------------------------------
+
+/*
+Allows each layout item to size itself automatically on a single row by
+dividing the space equally between the total number of items.
+*/
+
+.o-layout--fit {
+	flex-wrap: nowrap;
+}
+
+
+
+// EQUAL HEIGHT MODIFIERS
+//------------------------------------------------------------------------------------------------
+
+/*
+Makes each column have an equal height. Also includes modifiers for
+individual columns.
+*/
+
+.o-layout--fit-height {
+	align-items: stretch;
+}
+
+.o-layout__item--fit-height {
+	align-self: stretch;
+}
+
+
+/*
+With a fit-height modifier active, any child element
+with 'o-layout__fill' will expand to fill all available
+space created by everything being equal height.
+*/
+
+.o-layout--fit-height,
+.o-layout__item--fit-height {
+	.o-layout__fill {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		height: 100%;
+	}
+}
