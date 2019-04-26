@@ -66,10 +66,17 @@ $component-expander-border-color: #c4c4c4 !default;
 }
 
 .c-expander__content {
+	display: none;
 	border: rem(0px) solid $component-expander-border-color;
 	border-top: 0;
 	border-bottom-left-radius: rem(10px);
 	border-bottom-right-radius: rem(10px);
+}
+
+.c-expander.is-active {
+	.c-expander__content {
+		display: block;
+	}
 }
 
 
