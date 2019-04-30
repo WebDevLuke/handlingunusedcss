@@ -16,6 +16,9 @@ Naming convention taken from the NATO phonetic alphabet:
 https://en.wikipedia.org/wiki/NATO_phonetic_alphabet
 */
 
+@include render('typography') {
+
+
 // COMPONENT COLOURS
 //------------------------------------------------------------------------------------------------
 
@@ -80,4 +83,7 @@ $component-typography-focus-color: #5aa1ce !default;
 	.c-type-foxtrot {
 		font-size: rem(22px);
 	}
+}
+
+// End render
 }

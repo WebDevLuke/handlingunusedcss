@@ -7,6 +7,8 @@ Boxes off content
 http://csswizardry.com/2011/10/the-island-object/
 */
 
+@include render('box') {
+
 
 // BLOCK & ELEMENTS
 //------------------------------------------------------------------------------------------------
@@ -77,4 +79,8 @@ Add these to a box with spacing to filter which sides have spacing.
 .o-box--spacing-disable-bottom,
 .o-box--spacing-vertical  {
 	padding-bottom: 0;
+}
+
+
+// End render
 }

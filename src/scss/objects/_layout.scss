@@ -8,6 +8,8 @@ layout__item representing an individual column. Typically used with
 container object and width utilities to form a grid system.
 */
 
+@include render('layout') {
+
 
 // BLOCK & ELEMENTS
 //------------------------------------------------------------------------------------------------
@@ -127,4 +129,7 @@ space created by everything being equal height.
 		flex-direction: column;
 		height: 100%;
 	}
+}
+
+// End render
 }

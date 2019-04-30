@@ -7,6 +7,8 @@ Decorated wrapper around expander object. Use if you require a premade
 expander, rather than creating your own using the expander object as a base.
 */
 
+@include render('expander') {
+
 // COMPONENT COLOURS
 //------------------------------------------------------------------------------------------------
 
@@ -94,4 +96,7 @@ $component-expander-border-color: #c4c4c4 !default;
 			border-bottom-left-radius: 0;
 		}
 	}
+}
+
+// End render
 }

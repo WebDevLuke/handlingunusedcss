@@ -6,6 +6,7 @@
 Standard button component.
 */
 
+@include render('button') {
 
 // COMPONENT COLOURS
 //------------------------------------------------------------------------------------------------
@@ -70,4 +71,7 @@ colour change as people with colour blindness may not see it.
 	.c-button {
 		font-size: rem(22px); /* [2] */
 	}
+}
+
+// End render
 }
