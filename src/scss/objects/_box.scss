@@ -35,8 +35,10 @@ extra is added to the bottom of the box to better visually balance contents.
 // Generate using settings.spacing
 // Example: o-box--spacing-tiny
 @each $sp-name, $sp-value in $spacing {
-	.o-box--spacing-#{$sp-name} {
-		padding: rem($sp-value) rem($sp-value) rem($sp-value + ($sp-value * 0.2)) rem($sp-value);
+	@include filter('o-box--spacing-#{$sp-name}') {
+		.o-box--spacing-#{$sp-name} {
+			padding: rem($sp-value) rem($sp-value) rem($sp-value + ($sp-value * 0.2)) rem($sp-value);
+		}
 	}
 }
 
@@ -46,8 +48,10 @@ extra is added to the bottom of the box to better visually balance contents.
 @each $bp-name, $bp-value in $mq-breakpoints {
 	@include mq(#{$bp-name}) {
 		@each $sp-name, $sp-value in $spacing {
-			.o-box--spacing-#{$sp-name}\@#{$bp-name} {
-				padding: rem($sp-value) rem($sp-value) rem($sp-value + ($sp-value * 0.2)) rem($sp-value);
+			@include filter('o-box--spacing-#{$sp-name}@#{$bp-name}') {
+				.o-box--spacing-#{$sp-name}\@#{$bp-name} {
+					padding: rem($sp-value) rem($sp-value) rem($sp-value + ($sp-value * 0.2)) rem($sp-value);
+				}
 			}
 		}
 	}
