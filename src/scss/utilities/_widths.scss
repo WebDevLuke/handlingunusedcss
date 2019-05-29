@@ -16,24 +16,12 @@ $utility-widths-sets: 12 !default;
 	}
 
 	@for $i from 1 through $width-sets {
-		@if $i == $utility-widths-sets {
-			.u-width-#{$i}\/#{$width-sets}#{$breakpoint-suffix}#{$breakpoint-key},
-			.u-width-full#{$breakpoint-suffix}#{$breakpoint-key} {
-				width: ($i / $width-sets) * 100% !important;
-				max-width: ($i / $width-sets) * 100% !important;
-				flex-basis: ($i / $width-sets) * 100% !important;
-				margin-left: 0 !important; /* [1] */
-				flex-grow: 1 !important;
-			}
-		}
-		@else {
-			.u-width-#{$i}\/#{$width-sets}#{$breakpoint-suffix}#{$breakpoint-key} {
-				width: ($i / $width-sets) * 100% !important;
-				max-width: ($i / $width-sets) * 100% !important;
-				flex-basis: ($i / $width-sets) * 100% !important;
-				margin-left: 0 !important; /* [1] */
-				flex-grow: 1 !important;
-			}
+		.u-width-#{$i}\/#{$width-sets}#{$breakpoint-suffix}#{$breakpoint-key} {
+			width: ($i / $width-sets) * 100% !important;
+			max-width: ($i / $width-sets) * 100% !important;
+			flex-basis: ($i / $width-sets) * 100% !important;
+			margin-left: 0 !important; /* [1] */
+			flex-grow: 1 !important;
 		}
 	}
 
