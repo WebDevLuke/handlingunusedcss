@@ -85,15 +85,17 @@ $component-expander-border-color: #c4c4c4 !default;
 // BORDER MODIFIER
 //------------------------------------------------------------------------------------------------
 
-.c-expander--content-border {
-	.c-expander__content {
-		border-width: rem(1px);
-	}
-	&.is-active,
-	&.is-animating {
-		.c-expander__header {
-			border-bottom-right-radius: 0;
-			border-bottom-left-radius: 0;
+@include filter('c-expander--content-border') {
+	.c-expander--content-border {
+		.c-expander__content {
+			border-width: rem(1px);
+		}
+		&.is-active,
+		&.is-animating {
+			.c-expander__header {
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+			}
 		}
 	}
 }

@@ -15,17 +15,7 @@ $utility-widths-sets: 12 !default;
 	}
 
 	@for $i from 1 through $width-sets {
-		@if $i == $utility-widths-sets {
-			.u-width-#{$i}\/#{$width-sets}#{$breakpoint-suffix}#{$breakpoint-key},
-			.u-width-full#{$breakpoint-suffix}#{$breakpoint-key} {
-				width: ($i / $width-sets) * 100% !important;
-				max-width: ($i / $width-sets) * 100% !important;
-				flex-basis: ($i / $width-sets) * 100% !important;
-				margin-left: 0 !important; /* [1] */
-				flex-grow: 1 !important;
-			}
-		}
-		@else {
+		@include filter('u-width-#{$i}\/#{$width-sets}#{$breakpoint-suffix}#{$breakpoint-key}') {
 			.u-width-#{$i}\/#{$width-sets}#{$breakpoint-suffix}#{$breakpoint-key} {
 				width: ($i / $width-sets) * 100% !important;
 				max-width: ($i / $width-sets) * 100% !important;
@@ -36,28 +26,34 @@ $utility-widths-sets: 12 !default;
 		}
 	}
 
-	.u-width-auto#{$breakpoint-suffix}#{$breakpoint-key} {
-		width: auto !important;
-		flex-basis: 0 !important;
-		margin-left: 0 !important; /* [1] */
-		flex-grow: 1 !important;
-		max-width: initial !important;
+	@include filter('u-width-auto#{$breakpoint-suffix}#{$breakpoint-key}') {
+		.u-width-auto#{$breakpoint-suffix}#{$breakpoint-key} {
+			width: auto !important;
+			flex-basis: 0 !important;
+			margin-left: 0 !important; /* [1] */
+			flex-grow: 1 !important;
+			max-width: initial !important;
+		}
 	}
 
-	.u-width-grow#{$breakpoint-suffix}#{$breakpoint-key} {
-		width: auto !important;
-		flex-basis: auto !important;
-		margin-left: 0 !important; /* [1] */
-		flex-grow: 1 !important;
-		max-width: initial !important;
+	@include filter('u-width-grow#{$breakpoint-suffix}#{$breakpoint-key}') {
+		.u-width-grow#{$breakpoint-suffix}#{$breakpoint-key} {
+			width: auto !important;
+			flex-basis: auto !important;
+			margin-left: 0 !important; /* [1] */
+			flex-grow: 1 !important;
+			max-width: initial !important;
+		}
 	}
 
-	.u-width-shrink#{$breakpoint-suffix}#{$breakpoint-key} {
-		width: auto !important;
-		flex-basis: auto !important;
-		margin-left: 0 !important; /* [1] */
-		flex-grow: 0 !important;
-		max-width: initial !important;
+	@include filter('u-width-shrink#{$breakpoint-suffix}#{$breakpoint-key}') {
+		.u-width-shrink#{$breakpoint-suffix}#{$breakpoint-key} {
+			width: auto !important;
+			flex-basis: auto !important;
+			margin-left: 0 !important; /* [1] */
+			flex-grow: 0 !important;
+			max-width: initial !important;
+		}
 	}
 }
 
