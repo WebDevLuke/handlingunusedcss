@@ -7,6 +7,8 @@ Constrains the content within a max-width. Typically used with
 o-layout and width utilities to form a 12 column grid system.
 */
 
+@include render('container') {
+
 
 // BLOCK & ELEMENTS
 //------------------------------------------------------------------------------------------------
@@ -18,4 +20,7 @@ o-layout and width utilities to form a 12 column grid system.
 	padding-left: rem(20px);
 	padding-right: rem(20px);
 	width: 100%; 
+}
+
+// End render
 }

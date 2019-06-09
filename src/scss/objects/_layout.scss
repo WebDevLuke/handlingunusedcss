@@ -8,6 +8,8 @@ layout__item representing an individual column. Typically used with
 container object and width utilities to form a grid system.
 */
 
+@include render('layout') {
+
 
 // BLOCK & ELEMENTS
 //------------------------------------------------------------------------------------------------
@@ -62,21 +64,25 @@ Flush removes the gutter between layout items.
 from columns
 */
 
-.o-layout--flush {
-	margin-left: 0; /* [1] */
-	margin-right: 0; /* [1] */
-	& > .o-layout__item {
-		padding-left: 0;
-		padding-right: 0;
+@include filter('o-layout--flush') {
+	.o-layout--flush {
+		margin-left: 0; /* [1] */
+		margin-right: 0; /* [1] */
+		& > .o-layout__item {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 }
 
-.o-layout__item--flush { 
-	&:not(:first-child) {
-		padding-left: 0;
-	}
-	&:not(:last-child) {
-		padding-right: 0;
+@include filter('o-layout__item--flush') {
+	.o-layout__item--flush { 
+		&:not(:first-child) {
+			padding-left: 0;
+		}
+		&:not(:last-child) {
+			padding-right: 0;
+		}
 	}
 }
 
@@ -90,8 +96,10 @@ Allows each layout item to size itself automatically on a single row by
 dividing the space equally between the total number of items.
 */
 
-.o-layout--fit {
-	flex-wrap: nowrap;
+@include filter('o-layout--fit') {
+	.o-layout--fit {
+		flex-wrap: nowrap;
+	}
 }
 
 
@@ -104,12 +112,16 @@ Makes each column have an equal height. Also includes modifiers for
 individual columns.
 */
 
-.o-layout--fit-height {
-	align-items: stretch;
+@include filter('o-layout--fit-height') {
+	.o-layout--fit-height {
+		align-items: stretch;
+	}
 }
 
-.o-layout__item--fit-height {
-	align-self: stretch;
+@include filter('o-layout__item--fit-height') {
+	.o-layout__item--fit-height {
+		align-self: stretch;
+	}
 }
 
 
@@ -119,12 +131,17 @@ with 'o-layout__fill' will expand to fill all available
 space created by everything being equal height.
 */
 
-.o-layout--fit-height,
-.o-layout__item--fit-height {
-	.o-layout__fill {
-		display: flex;
-		flex-grow: 1;
-		flex-direction: column;
-		height: 100%;
+@include filter('o-layout--fit-height', 'o-layout__item--fit-height') {
+	.o-layout--fit-height,
+	.o-layout__item--fit-height {
+		.o-layout__fill {
+			display: flex;
+			flex-grow: 1;
+			flex-direction: column;
+			height: 100%;
+		}
 	}
+}
+
+// End render
 }

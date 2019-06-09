@@ -1,0 +1,20 @@
+$imports: (
+	 object: (
+		'box',
+		'container'
+		// 'layout'
+	 ),
+	 component: (
+		// 'button',
+		'expander'
+		// 'typography'
+	 ),
+	 utility: (
+		// 'alignments',
+		// 'widths'
+	 )
+);
+
+$global-filter: (
+	'o-box--spacing-regular'
+);

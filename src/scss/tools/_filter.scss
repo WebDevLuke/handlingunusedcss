@@ -1,0 +1,19 @@
+//------------------------------------------------------------------------------------------------
+// FILTER
+//------------------------------------------------------------------------------------------------
+
+@mixin filter($class...) {
+	@if($enable-all-classes) {
+		@content;
+	}
+	@else if(type-of($class) == 'arglist') {
+		@each $item in $class {
+			@if(index($global-filter, $item)) {
+				@content;
+			}
+		}
+	}
+	@else if(index($global-filter, $class)) {
+		@content;
+	}
+}
