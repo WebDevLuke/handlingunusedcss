@@ -59,42 +59,42 @@
 }
 
 // Flex equivalents
-@include filter(('u-flex-middle', 'u-flex-center-all')) {
+@include filter('u-flex-middle', 'u-flex-center-all') {
 	.u-flex-middle,
 	.u-flex-center-all {
 		align-items: center !important;
 	}
 }
 
-@include filter(('u-flex-center', 'u-flex-center-all')) {
+@include filter('u-flex-center', 'u-flex-center-all') {
 	.u-flex-center,
 	.u-flex-center-all {
 		justify-content: center !important;
 	}
 }
 
-@include filter(('u-flex-left', 'u-flex-justify-start')) {
+@include filter('u-flex-left', 'u-flex-justify-start') {
 	.u-flex-justify-start,
 	.u-flex-left {
 		justify-content: flex-start !important;
 	}
 }
 
-@include filter(('u-flex-right', 'u-flex-justify-end')) {
+@include filter('u-flex-right', 'u-flex-justify-end') {
 	.u-flex-justify-end,
 	.u-flex-right {
 		justify-content: flex-end !important;
 	}
 }
 
-@include filter(('u-flex-top', 'u-flex-align-start')) {
+@include filter('u-flex-top', 'u-flex-align-start') {
 	.u-flex-align-start,
 	.u-flex-top {
 		align-items: flex-start !important;
 	}
 }
 
-@include filter(('u-flex-bottom', 'u-flex-align-end')) {
+@include filter('u-flex-bottom', 'u-flex-align-end') {
 	.u-flex-align-end,
 	.u-flex-bottom {
 		align-items: flex-end !important;

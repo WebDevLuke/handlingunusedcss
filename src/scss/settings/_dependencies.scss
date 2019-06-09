@@ -1,51 +1,48 @@
 $dependencies: (
-   expander: (
-       object: (
-           box: (
-               'o-box--spacing-small'
-           ),
-           layout: (
-               'o-layout--fit'
-           )
-       ),
-       component: (
-           box: (
-               'c-box--rounded'
-           ),
-           button: true,
-           typography: true
-       ),
-       utility: (
-           alignments: (
-               'u-flex-middle',
-               'u-align-center'
-           ),
-           widths: (
-               'u-width-grow',
-               'u-width-shrink'
-           )
-       )
-   )
+	expander: (
+		object: (
+			box: (
+				'o-box--spacing-small'
+			),
+			layout: (
+				'o-layout--fit'
+			)
+		),
+		component: (
+			button: true,
+			typography: true
+		),
+		utility: (
+			alignments: (
+				'u-flex-middle',
+				'u-align-center'
+			),
+			widths: (
+				'u-width-grow',
+				'u-width-shrink'
+			)
+		)
+	)
 );
 
 @mixin dependency-setup() {
-   $components: map-get($imports, component);
-   @each $componentKey, $componentValue in $dependencies {
-       @if(index($components, $componentKey)) {
-           @each $layerKey, $layerValue in $componentValue {
-               @each $partKey, $partValue in $layerValue {
-                   @if not index(map-get($imports, $layerKey), $partKey) {
-                       $imports: map-merge($imports, (
-                           $layerKey: append(map-get($imports, $layerKey), '#{$partKey}')
-                       )) !global;
-                   }
-                   @each $class in $partValue {
-                      $global-filter: append($global-filter, '#{$class}', 'comma') !global;
-                   }
-               }
-           }
-       }
-   }
+	$components: map-get($imports, component);
+	@each $componentKey, $componentValue in $dependencies {
+		@if(index($components, $componentKey)) {
+			@each $layerKey, $layerValue in $componentValue {
+				@each $partKey, $partValue in $layerValue {
+					@if not index(map-get($imports, $layerKey), $partKey) {
+						$imports: map-merge($imports, (
+							$layerKey: append(map-get($imports, $layerKey), '#{$partKey}')
+							)) !global;
+					}
+					@each $class in $partValue {
+						$global-filter: append($global-filter, '#{$class}', 'comma') !global;
+					}
+				}
+			}
+		}
+	}
 }
 
 @include dependency-setup();

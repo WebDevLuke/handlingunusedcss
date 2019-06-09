@@ -4,7 +4,7 @@
 
 $layer: null !default;
 @mixin render($name) {
-	@if(index(map-get($imports, $layer), $name)) {
+	@if($enable-all-classes or index(map-get($imports, $layer), $name)) {
 		@content;
 	}
 }

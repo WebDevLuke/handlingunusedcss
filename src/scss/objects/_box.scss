@@ -9,7 +9,6 @@ http://csswizardry.com/2011/10/the-island-object/
 
 @include render('box') {
 
-
 // BLOCK & ELEMENTS
 //------------------------------------------------------------------------------------------------
 
@@ -65,28 +64,28 @@ extra is added to the bottom of the box to better visually balance contents.
 Add these to a box with spacing to filter which sides have spacing.
 */
 
-@include filter(('o-box--spacing-disable-left', 'o-box--spacing-horizontal')) {
+@include filter('o-box--spacing-disable-left', 'o-box--spacing-horizontal') {
 	.o-box--spacing-disable-left,
 	.o-box--spacing-horizontal {
 		padding-left: 0;
 	}
 }
 
-@include filter(('o-box--spacing-disable-right', 'o-box--spacing-horizontal')) {
+@include filter('o-box--spacing-disable-right', 'o-box--spacing-horizontal') {
 	.o-box--spacing-disable-right,
 	.o-box--spacing-horizontal {
 		padding-right: 0;
 	}
 }
 
-@include filter(('o-box--spacing-disable-top', 'o-box--spacing-vertical')) {
+@include filter('o-box--spacing-disable-top', 'o-box--spacing-vertical') {
 	.o-box--spacing-disable-top,
 	.o-box--spacing-vertical  {
 		padding-top: 0;
 	}
 }
 
-@include filter(('o-box--spacing-disable-bottom', 'o-box--spacing-vertical')) {
+@include filter('o-box--spacing-disable-bottom', 'o-box--spacing-vertical') {
 	.o-box--spacing-disable-bottom,
 	.o-box--spacing-vertical  {
 		padding-bottom: 0;

@@ -131,7 +131,7 @@ with 'o-layout__fill' will expand to fill all available
 space created by everything being equal height.
 */
 
-@include filter(('o-layout--fit-height', 'o-layout__item--fit-height')) {
+@include filter('o-layout--fit-height', 'o-layout__item--fit-height') {
 	.o-layout--fit-height,
 	.o-layout__item--fit-height {
 		.o-layout__fill {
