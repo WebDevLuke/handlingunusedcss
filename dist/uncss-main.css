@@ -1,0 +1,583 @@
+/*
+Here we define spacing variants. These are used to generate spacing
+variants for many object and utility classes to give you an easy way of
+spacing out content. Typically, if a component requires more precise
+spacing, this CSS should be defined in the component CSS, not here.
+*/
+/*
+A function to convert any px value into its rem equivalent
+
+.myElement {
+	padding: rem(16px);
+}
+*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+/*
+Set the global `box-sizing` state to `border-box`.
+
+css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+paulirish.com/2012/box-sizing-border-box-ftw
+*/
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*
+An additional reset that sits on top of Normalize.css.
+*/
+body,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/*
+Remove trailing margins from nested lists.
+*/
+
+/*
+Remove default table spacing.
+*/
+
+/*
+[1] Remove firefox blur on invalid elements
+*/
+
+/*
+Resets transparency on input placeholders
+*/
+::-webkit-input-placeholder {
+  opacity: 1; }
+
+::-moz-placeholder {
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  opacity: 1; }
+
+/*
+Disables Safari iOS default styles for disabled inputs
+*/
+
+/*
+Remove spinners/arrows for number input
+*/
+
+/*
+Remove default italics from address element
+*/
+
+/*
+Make button into blank element
+*/
+button {
+  background-color: transparent;
+  border: 0;
+  padding: 0; }
+
+/*
+Set a global tabindex rule, so when non-focusable elements are made
+focusable, the intent is to make them interactive, so we add a pointer
+cursor on hover.
+*/
+[tabindex] {
+  cursor: pointer; }
+
+/*
+Set basic styles for HTML top level element.
+*/
+/*
+[1] The `font-size` is calculated to exist in ems so the users browser
+font-size is respected if changed.
+*/
+html {
+  font-family: sans-serif;
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  min-height: 100%;
+  overflow-y: scroll;
+  color: #000000; }
+
+/*
+Basic styles for typography elements
+*/
+/*
+Keep headers identical and apply styles via component classes avoiding the
+trap of semantically requiring a specific header and then having to override
+styles because cosmetics aren't appropriate.
+
+http://csswizardry.com/2016/02/managing-typography-on-large-apps/
+*/
+h2 {
+  font-size: 1rem; }
+
+p {
+  margin-bottom: 1.2em; }
+
+p:last-child {
+  margin-bottom: 0; }
+
+/*
+Define consistent indentation lists. Also, add matching margin bottom so
+they can be mixed in with paragraphs.
+*/
+
+/*
+Boxes off content
+http://csswizardry.com/2011/10/the-island-object/
+*/
+/*
+[1] So we can apply the `.o-box` class to naturally-inline elements.
+[2] If within a flex box, make sure it stretches full width by default.
+*/
+.o-box {
+  display: block;
+  /* [1] */
+  width: 100%;
+  /* [2] */ }
+
+/*
+Generates variants in padding size using data from settings.spacing. 20%
+extra is added to the bottom of the box to better visually balance contents.
+*/
+
+.o-box--spacing-small {
+  padding: 0.9375rem 0.9375rem 1.125rem 0.9375rem; }
+
+.o-box--spacing-regular {
+  padding: 1.875rem 1.875rem 2.25rem 1.875rem; }
+
+/*
+Add these to a box with spacing to filter which sides have spacing.
+*/
+
+/*
+Constrains the content within a max-width. Typically used with
+o-layout and width utilities to form a 12 column grid system.
+*/
+.o-container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 73.125rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  width: 100%; }
+
+/*
+The layout object is used to construct a grid-like layout system, with each
+layout__item representing an individual column. Typically used with
+container object and width utilities to form a grid system.
+*/
+/*
+[1] Allows us to use the layout object on any type of element.
+[2] Makes layout fill all available space. Useful for nesting layouts within
+layouts.
+[3] We need to defensively reset any box-model properties.
+[4] Absorb amount equal to half of the gutter on either side to account for
+their spacing.
+[5] Removes bullet points if layout is a list
+*/
+.o-layout {
+  align-items: flex-start;
+  display: flex;
+  /* [1] */
+  flex-wrap: wrap;
+  flex-grow: 1;
+  /* [2] */
+  margin: 0;
+  /* [3] */
+  padding: 0;
+  /* [3] */
+  margin-left: -rem(20px)/2;
+  /* [4] */
+  margin-right: -rem(20px)/2;
+  /* [4] */
+  list-style: none;
+  /* [5] */ }
+
+/*
+[1] Required in order to combine fluid widths with fixed gutters.
+*/
+.o-layout__item {
+  box-sizing: border-box;
+  /* [1] */
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  vertical-align: top;
+  width: 100%;
+  max-width: 100%;
+  flex-basis: 0;
+  flex-grow: 1; }
+
+/*
+Flush removes the gutter between layout items.
+*/
+/*
+[1] Remove negative margins as we no longer have to absorb any paddings
+from columns
+*/
+
+/*
+Allows each layout item to size itself automatically on a single row by
+dividing the space equally between the total number of items.
+*/
+.o-layout--fit {
+  flex-wrap: nowrap; }
+
+/*
+Makes each column have an equal height. Also includes modifiers for
+individual columns.
+*/
+
+/*
+With a fit-height modifier active, any child element
+with 'o-layout__fill' will expand to fill all available
+space created by everything being equal height.
+*/
+
+/*
+Standard button component.
+*/
+/*
+Easily assign colours to the button component without having to
+find/replace variables.
+*/
+/*
+[1] Remove anchor text-decoration (necessary when styling `a`s as buttons).
+[2] Font size duplicate of c-text-lead.
+[3] Focus styles for when the user tabs onto the button shouldn't be just a
+colour change as people with colour blindness may not see it.
+*/
+.c-button {
+  align-items: center;
+  background-color: #ba4252;
+  border-radius: 0.625rem;
+  border: 0.125rem solid transparent;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1.125rem;
+  /* [2] */
+  font-weight: bold;
+  justify-content: center;
+  line-height: 2;
+  padding: 0 1.25rem;
+  text-decoration: none;
+  /* [1] */
+  position: relative;
+  transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+  min-height: 3.125rem;
+  min-width: 3.125rem; }
+  .c-button:hover {
+    background-color: #943541; }
+  .c-button:hover, .c-button:active, .c-button:focus {
+    text-decoration: none;
+    /* [1] */
+    outline: none; }
+  .c-button:focus {
+    background-color: #943541;
+    box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.25), 0 0 0.9375rem 0.1875rem rgba(186, 66, 82, 0.5); }
+
+@media (min-width: 48em) {
+  .c-button {
+    font-size: 1.375rem;
+    /* [2] */ } }
+
+/*
+Decorated wrapper around expander object. Use if you require a premade
+expander, rather than creating your own using the expander object as a base.
+*/
+/*
+Easily assign colours to the button component without having to
+find/replace variables.
+*/
+.c-expander__header {
+  border: 0rem solid #c4c4c4;
+  border-radius: 10px;
+  transition: border-radius 0.15s, background-color 0.25s;
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-width: 0.0625rem; }
+
+.c-expander__header-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: relative; }
+  .c-expander__header-icon:before, .c-expander__header-icon:after {
+    content: '';
+    display: block;
+    width: 0.125rem;
+    height: 1.25rem;
+    background-color: currentColor;
+    margin: 0 auto;
+    transition: transform 0.25s; }
+  .c-expander__header-icon:after {
+    width: 1.25rem;
+    height: 0.125rem;
+    position: absolute;
+    bottom: 0.5625rem; }
+
+  .c-expander.is-active .c-expander__header {
+    background-color: #f5f5f5; }
+
+  .c-expander.is-active .c-expander__header-icon:before {
+    transform: rotate(90deg); }
+
+  .c-expander__content {
+    display: none;
+    border: 0rem solid #c4c4c4;
+    border-top: 0;
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem; }
+
+  .c-expander.is-active .c-expander__content {
+    display: block; }
+
+/*
+In order to separate our semantic decisions from our stylistic ones, we only
+define opinionated typographical styles against classes, NOT against
+typographic HTML elements.
+
+Example: Will prevent a case where we need to use a H3 because of how it
+looks, rather than because its the correct place to use it in the document.
+
+https://csswizardry.com/2016/02/managing-typography-on-large-apps/
+
+Naming convention taken from the NATO phonetic alphabet:
+https://en.wikipedia.org/wiki/NATO_phonetic_alphabet
+*/
+/*
+Easily assign colours to the component without having to
+find/replace variables.
+*/
+
+.c-type-echo {
+  font-size: 1.25rem; }
+
+@media (min-width: 48em) {
+  .c-type-echo {
+    font-size: 1.5rem; } }
+
+.u-align-center {
+  text-align: center !important; }
+
+[class*='u-flex-'] {
+  display: flex !important; }
+
+.u-flex-middle {
+  align-items: center !important; }
+
+.u-width-grow {
+  width: auto !important;
+  flex-basis: auto !important;
+  margin-left: 0 !important;
+  /* [1] */
+  flex-grow: 1 !important;
+  max-width: initial !important; }
+
+.u-width-shrink {
+  width: auto !important;
+  flex-basis: auto !important;
+  margin-left: 0 !important;
+  /* [1] */
+  flex-grow: 0 !important;
+  max-width: initial !important; }
