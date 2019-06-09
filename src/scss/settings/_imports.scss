@@ -1,12 +1,12 @@
 $imports: (
 	 object: (
-		// 'box'
-		// 'container',
+		'box',
+		'container'
 		// 'layout'
 	 ),
 	 component: (
 		// 'button',
-		// 'expander',
+		'expander'
 		// 'typography'
 	 ),
 	 utility: (
@@ -15,4 +15,6 @@ $imports: (
 	 )
 );
 
-$global-filter: ();
+$global-filter: (
+	'o-box--spacing-regular'
+);

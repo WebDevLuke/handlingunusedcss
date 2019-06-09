@@ -10,7 +10,9 @@ $dependencies: (
 		),
 		component: (
 			button: true,
-			typography: true
+			typography: (
+				'c-type-echo'
+			)
 		),
 		utility: (
 			alignments: (
