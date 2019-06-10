@@ -1,5 +1,5 @@
-# Handling Unused CSS with SASS
-This is a boilerplate which will allow you to follow along more easily with the article "Handling Unused CSS with SASS".
+# Removing unused CSS with SASS to improve performance
+This is a boilerplate which will allow you to follow along more easily with the article "Removing unused CSS with SASS to improve performance".
 
 ## Instructions
 - `npm run install` to install dependencies for SASS compilation
